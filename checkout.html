@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Finalizar Compra</h1>
+        <a class="voltar" href="carrinho.html">⬅ Voltar ao carrinho</a>
+    </header>
+    <main>
+        <form id="checkout-form" class="checkout-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+            
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" required>
+            
+            <label for="pagamento">Forma de Pagamento:</label>
+            <select id="pagamento">
+                <option>Cartão de Crédito</option>
+                <option>Boleto</option>
+                <option>Pix</option>
+            </select>
+            
+            <button type="submit" class="confirmar">Confirmar Pedido</button>
+        </form>
+        <p id="mensagem-sucesso" class="mensagem-sucesso">Pedido finalizado com sucesso!</p>
+    </main>
+    <footer>
+        <p>&copy; 2025 E-commerce Dark. Todos os direitos reservados.</p>
+        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+    </footer>
+    <script>
+        document.getElementById("checkout-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("mensagem-sucesso").style.display = "block";
+        });
+    </script>
+</body>
+</html>

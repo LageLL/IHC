@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Loja Online</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <header>
+        <h1>Loja Online</h1>
+        <div>
+            <button onclick="alterarFonte(1)">A+</button>
+            <button onclick="alterarFonte(-1)">A-</button>
+            <a class="cor-carrinho" href="carrinho.html">| 🛒 Carrinho (<span id="cart-count">0</span>)</a>
+        </div>
+        
+    </header>
+    <h2>Frete Gratis apenas para a região sudeste!</h2>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <main>
+        <div class="produto" data-id="1" data-nome="Camisa Flamengo 25/26" data-preco="269.99">
+            <img src="https://static.netshoes.com.br/produtos/camisa-flamengo-i-2526-sn-torcedor-adidas-masculina/06/FBA-3565-006/FBA-3565-006_zoom1.jpg?ts=1737121151&ims=1088x" width="150" alt="Camisa Flamengo 25/26">
+            <h2>Camisa Flamengo 25/26</h2>
+            <p>R$ 269,99</p>
+            <button onclick="adicionarAoCarrinho(1, 'Camisa Flamengo 25/26', 239.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto" data-id="2" data-nome="Camisa Palmeiras 25/26" data-preco="239.99">
+            <img src="https://static.netshoes.com.br/produtos/camisa-palmeiras-home-2526-sn-torcedor-puma-masculina/60/PI3-5670-060/PI3-5670-060_zoom1.jpg?ts=1739199624&ims=1088x" width="150" alt="Camisa Palmeiras 25/26">
+            <h2>Camisa Palmeiras 25/26</h2>
+            <p>R$ 239,99</p>
+            <button onclick="adicionarAoCarrinho(2, 'Camisa Palmeiras 25/26', 239.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto" data-id="3" data-nome="Camisa Inter(POA) 25/26" data-preco="249.99">
+            <img src="https://static.netshoes.com.br/produtos/camisa-internacional-i-2425-sn-torcedor-adidas-masculina/56/FB9-4324-056/FB9-4324-056_zoom1.jpg?ts=1711019392&ims=1088x" width="150" alt="Camisa Internacional 25/26">
+            <h2>Camisa Inter(POA) 25/26</h2>
+            <p>R$ 249,99</p>
+            <button onclick="adicionarAoCarrinho(3, 'Camisa Inter(POA) 25/26', 215.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto" data-id="4" data-nome="Camisa São Paulo 25/26" data-preco="215.99">    
+            <img src="https://static.netshoes.com.br/produtos/camisa-sao-paulo-2526-home-torcedor-new-balance-masculina/24/39V-1638-024/39V-1638-024_zoom1.jpg?ts=1738669569&ims=1088x" width="150" alt="Camisa São Paulo 25/26">
+            <h2>Camisa São Paulo 25/26</h2>
+            <p>R$ 215,99</p>
+            <button onclick="adicionarAoCarrinho(4, 'Camisa São Paulo 25/26', 215.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto" data-id="5" data-nome="Camisa Santos 25/26" data-preco="249.99">
+            <img src="https://static.netshoes.com.br/produtos/camisa-santos-i-2526-sn-jogador-umbro-masculina/58/2IB-1487-158/2IB-1487-158_zoom1.jpg?ts=1741774959&ims=1088x" width="150" alt="Santos">
+            <h2>Camisa Santos 25/26</h2>
+            <p>R$ 249,99</p>
+            <button onclick="adicionarAoCarrinho(5, 'Camisa Santos 25/26', 249.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto" data-id="6" data-nome="Camisa Vasco 25/26" data-preco="279.99">
+            <img src="https://static.netshoes.com.br/produtos/camisa-vasco-i-2425-jogador-kappa-masculina/26/D24-6176-026/D24-6176-026_zoom1.jpg?ts=1713200261&ims=1088x" width="150" alt="Vasco">
+            <h2>Camisa Vasco 25/26</h2>
+            <p>R$ 279,99</p>
+            <button onclick="adicionarAoCarrinho(6, 'Camisa Vasco 25/26', 279.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto" data-id="7" data-nome="Camisa Fluminense 25/26" data-preco="249.99">
+            <img src="https://static.netshoes.com.br/produtos/camisa-fluminense-i-2425-sn-torcedor-umbro-masculina/54/2IB-0231-054/2IB-0231-054_zoom1.jpg?ts=1728658688&ims=1088x" width="150" alt="Fluminense">
+            <h2>Camisa Fluminense 25/26</h2>
+            <p>R$ 249,99</p>
+            <button onclick="adicionarAoCarrinho(7, 'Camisa Fluminense 25/26', 249.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto" data-id="8" data-nome="Camisa Botafogo 25/26" data-preco="229.99">
+            <img src="https://static.netshoes.com.br/produtos/camisa-botafogo-i-2324-sn-torcedor-reebok-masculina/26/D19-6616-026/D19-6616-026_zoom1.jpg?ts=1699277461&ims=1088x" width="150" alt="Produto 1">
+            <h2>Camisa Botafogo 25/26</h2>
+            <p>R$ 229,99</p>
+            <button onclick="adicionarAoCarrinho(8, 'Camisa Botafogo 25/26', 229.99)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="produto" data-id="9" data-nome="Camisa Cruzeiro 25/26" data-preco="249.99">
+            <img src="https://static.netshoes.com.br/produtos/camisa-cruzeiro-i-2526-sn-torcedor-adidas-masculina/08/FBA-3556-008/FBA-3556-008_zoom1.jpg?ts=1741339432&ims=1088x" width="150" alt="Produto 1">
+            <h2>Camisa Cruzeiro 25/26</h2>
+            <p>R$ 249,99</p>
+            <button onclick="adicionarAoCarrinho(9, 'Camisa Cruzeiro 25/26', 249.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto" data-id="10" data-nome="Camisa Grêmio 25/26" data-preco="229.99">
+            <img src="https://static.netshoes.com.br/produtos/camisa-gremio-i-2425-snjogador-umbro-masculina/08/2IA-9077-108/2IA-9077-108_zoom1.jpg?ts=1719511917&ims=1088x" width="150" alt="Produto 1">
+            <h2>Camisa Grêmio 25/26</h2>
+            <p>R$ 229,99</p>
+            <button onclick="adicionarAoCarrinho(10, 'Camisa Grêmio 25/26', 229.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto" data-id="11" data-nome="Camisa Atletico MG 25/26" data-preco="239.99">
+            <img src="https://static.netshoes.com.br/produtos/camisa-atletico-mineiro-i-2526-sn-torcedor-adidas-masculina/06/FBA-3548-006/FBA-3548-006_zoom1.jpg?ts=1737618820&ims=1088x" width="150" alt="Produto 1">
+            <h2>Camisa Atletico MG 25/26</h2>
+            <p>R$ 239,99</p>
+            <button onclick="adicionarAoCarrinho(11, 'Camisa Atletico MG 25/26', 239.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto" data-id="12" data-nome="Camisa Corinthians 24/25" data-preco="239.99">
+            <img src="https://static.netshoes.com.br/produtos/camisa-corinthians-masculina/14/RT4-0094-014/RT4-0094-014_zoom1.jpg?ts=1732550776&ims=1088x" width="150" alt="Produto 1">
+            <h2>Camisa Corinthians 24/25</h2>
+            <p>R$ 239,99</p>
+            <button onclick="adicionarAoCarrinho(12, 'Camisa Corinthians 24/25', 239.99)">Adicionar ao Carrinho</button>
+        </div>
+        
+    </main>
+    <footer>
+        <p>&copy; 2025 E-commerce Dark. Todos os direitos reservados.</p>
+        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+    </footer>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>new window.VLibras.Widget();</script>
+    <script src="script.js"></script>
+</body>
+</html>
